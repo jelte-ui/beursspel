@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Beursspel</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"><style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#100c0a;--card:#1a1512;--card2:#221b17;--tx:#f4efe9;--mu:#9a8f86;--g:#19d38a;--r:#ff4560;--ac:#ef6a3a;--ac2:#ff8f5a;--bd:#2d241f}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;color:var(--tx);font:14px/1.4 'Space Grotesk',Inter,system-ui,sans-serif;background:radial-gradient(900px 500px at 10% -10%,rgba(239,106,58,.12),transparent 60%),radial-gradient(800px 500px at 100% 0,rgba(239,106,58,.06),transparent 60%),var(--bg);min-height:100vh}
@@ -53,10 +53,69 @@ tr.a{transition:transform .2s}tr.a:hover{transform:translateX(3px)}th{padding-bo
 .hero h1{font-size:34px;letter-spacing:-1.2px}.logo i{font-weight:800;color:#fff}
 .tb{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px}.tg{display:flex;gap:2px;flex-wrap:wrap;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:3px}.tg button{background:transparent;border:0;color:var(--mu);padding:7px 11px;border-radius:9px;cursor:pointer;font:inherit;font-size:13px}.tg button:hover{color:var(--tx)}.tg button.on{background:rgba(239,106,58,.25);color:var(--tx)}
 canvas{touch-action:pan-y;user-select:none}
+.gb{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 18px;border:1px solid var(--bd);border-radius:16px;background:var(--card);margin:0 0 16px;color:var(--mu)}.gb:empty{display:none}
+#pf table td:first-child,#pf table th:first-child{text-align:left}
+.rk{display:flex;align-items:center;gap:14px;padding:14px 8px;border-bottom:1px solid var(--bd)}.rk:last-child{border-bottom:0}.rk.me{background:rgba(239,106,58,.10);border-radius:12px}
+.rn{width:28px;text-align:center;color:var(--mu);font-weight:700;font-size:16px}.rm{flex:1;min-width:0}.rm b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:16px}.rm small{color:var(--mu);font-family:ui-monospace,monospace;font-size:12px}
+.rv{text-align:right}.rv b{display:block;font-size:17px;font-variant-numeric:tabular-nums}.rv small{font-size:12px;font-weight:600}
+@media (max-width:700px){.rk{gap:8px;padding:12px 4px}.rm b,.rv b{font-size:14px}.rm small{font-size:10px}.rn{width:20px;font-size:13px}}
+.ft{max-width:1060px;margin:0 auto;padding:22px 14px 40px;border-top:1px solid var(--bd);text-align:center;color:var(--mu);font-size:13px}
 svg.sp2{width:90px;height:30px;vertical-align:middle}
+
+/* rustig thema */
+:root{--bg:#121110;--card:#1a1816;--card2:#221f1c;--bd:#2c2926;--tx:#f2efeb;--mu:#8f8a84;--ac:#e8693a;--ac2:#e8693a;--g:#1fb574;--r:#e5484d}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);font-feature-settings:'tnum'}body:before{display:none}
+header{background:rgba(18,17,16,.92);padding:12px 24px;border-bottom:1px solid var(--bd)}
+.logo{font-size:17px;font-weight:700}.logo i{background:var(--ac);box-shadow:none}
+nav{background:none;border:0;padding:0;gap:2px}nav button{background:none;color:var(--mu);border-radius:8px;padding:8px 14px;font-weight:500}nav button:hover{color:var(--tx)}nav button.on{background:var(--card2);color:var(--tx);box-shadow:none}
+.btn{background:var(--card2);border:1px solid var(--bd);border-radius:10px;font-weight:500;box-shadow:none}.btn:hover{transform:none;border-color:#4a4540}
+.btn.pri{background:var(--ac);color:#fff;border:0;box-shadow:none}.btn.pri:hover{background:#f07a4d}
+.btn.g{background:var(--g);color:#04170d;box-shadow:none}.btn.r{background:var(--r);color:#fff;box-shadow:none}
+#bal,#bal:not(:empty){background:var(--card);border:1px solid var(--bd);font-weight:500}
+.bighero{background:var(--card);box-shadow:none;border-radius:16px;padding:32px}.bighero:after{display:none}.bighero h1{font-size:clamp(28px,4.5vw,44px);letter-spacing:-1px;font-weight:600;margin:14px 0 10px}.bighero p{font-size:15px;margin-bottom:18px}
+.bdg{border:1px solid var(--bd);background:var(--card2);color:var(--mu)}
+.hero h1{font-weight:600;letter-spacing:-.8px}
+.sts div{background:var(--card);border:1px solid var(--bd);border-radius:14px}.sts b{font-weight:600}
+.card{background:var(--card);box-shadow:none;border-radius:14px}
+td{background:var(--card)}tr.a:hover td{background:var(--card2)}tr.a:hover{transform:none}
+.chips button{background:transparent;border-radius:8px;font-weight:500}.chips button.on{background:var(--card2);color:var(--tx);border:1px solid #4a4540;box-shadow:none}
+.dl{background:var(--card);border:1px solid var(--bd)}.dl b{color:var(--tx)}
+input:focus{box-shadow:none;border-color:var(--ac)}
+.tf button.on{background:var(--card2)}.pro.on{background:var(--ac);color:#fff}.tg button.on{background:var(--card2)}
+.sh{font-size:18px;font-weight:600;margin:28px 0 10px}
+.ic{box-shadow:none}.pill.up{background:rgba(31,181,116,.14)}.pill.dn{background:rgba(229,72,77,.14)}
+@keyframes gG{0%{background-color:rgba(31,181,116,.20);box-shadow:none}100%{background-color:#1a1816;box-shadow:none}}
+@keyframes gR{0%{background-color:rgba(229,72,77,.20);box-shadow:none}100%{background-color:#1a1816;box-shadow:none}}
+.md{position:fixed;inset:0;z-index:20;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:16px}.mdb{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:22px;max-width:420px;width:100%}.mdb h3{margin:0 0 8px}.mdb p{color:var(--mu);margin:6px 0}.mdb .row{margin-top:14px}
+#cv.big{height:460px}
+@media (max-width:700px){
+html,body{overflow-x:hidden}main{padding:10px 10px 40px}
+header{position:relative;padding:8px 10px;gap:8px}.logo{font-size:16px}.logo i{width:28px;height:28px;border-radius:8px}#bal{display:none}
+header .btn.pri{padding:8px 12px;font-size:12px;box-shadow:none}.sp{display:block}
+nav{order:3;width:100%;justify-content:space-between;flex-wrap:nowrap}nav button{flex:1;padding:9px 6px;font-size:13px}
+.bighero{padding:20px 16px;border-radius:20px;margin-bottom:12px}.bighero:after{display:none}.bighero h1{font-size:28px;letter-spacing:-1px;margin:12px 0 10px}.bighero p{display:none}.bdg{font-size:11px;padding:5px 10px}.bighero .btn{padding:10px 14px;font-size:13px}.bighero .btn:not(.pri){display:none}
+.hero h1{font-size:24px}.hero{margin:2px 0 12px}
+.sts{grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}.sts div{padding:10px 9px;border-radius:14px}.sts span{font-size:9px;letter-spacing:.3px}.sts b{font-size:14px;margin:6px 0 2px;letter-spacing:-.3px}.sts small{font-size:10px}
+.gb{padding:10px 12px;font-size:12px;margin-bottom:12px}.gb .btn{padding:8px 12px}
+.card{padding:14px;border-radius:16px;margin-bottom:12px}#pf.empty{display:none}
+#pf table th:nth-child(3),#pf table td:nth-child(3),#pf table th:nth-child(4),#pf table td:nth-child(4){display:none}#pf td:last-child{white-space:normal}
+input{font-size:16px;padding:11px 14px;margin:2px 0 10px}
+.chips{gap:6px;margin:8px 0}.chips button{flex:1;padding:9px 4px;font-size:12px}.chips small{display:none}
+.dl{padding:9px 12px;font-size:12px;border-radius:12px}.dl b{font-size:13px}
+table{border-spacing:0 6px}th{padding:2px 8px;font-size:10px}td{padding:10px 8px;font-size:13px}
+.lst th:last-child,.lst td:last-child{display:none}.lst td:first-child{white-space:normal;max-width:150px}.lst td:first-child .mu{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px}
+.ic{width:28px;height:28px;font-size:9px;margin-right:8px}.pill{font-size:11px;padding:3px 8px}
+.ugrid{grid-template-columns:1fr}
+#ov{padding:6px}#dt{padding:8px 4px}#dt>a{display:inline-block;padding:8px 0}#dt h2{font-size:22px!important}#pr{font-size:28px!important}
+.dgrid{gap:12px}#side1{display:none}canvas{height:270px}#cv.big{height:340px}
+.tf button{padding:7px 8px;font-size:12px}.tb{gap:6px}.tg button{padding:7px 8px;font-size:12px}
+.st div{min-width:70px;padding:8px 10px}.st div span{font-size:10px}
+.qk button{padding:7px 12px}
+}
 </style></head><body>
 <header><span class="logo"><i>B</i>Beursspel</span><nav id="nav"></nav><span class="sp"></span><span id="bal" class="mu"></span><button class="btn pri" id="lg"></button></header>
 <main id="m"></main>
+<footer class="ft">Gemaakt door Marcus, Daan, Jesse en Jelte</footer>
 <div id="ov"><div class="card" id="dt"></div></div>
 <script>
 let EUR=0.92;const $=s=>document.querySelector(s),R=Math.random,DELAY=15*6e4;
@@ -80,16 +139,16 @@ function icon(a){ if(a.k=='metals')return '<span class="ic" style="background:'+
  return '<span class="ic" style="background:'+a.c+'">'+a.id.slice(0,3)+'</span>'}
 // users
 const L=k=>{try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},W=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
-let U=L('pt_u')||{},cur=L('pt_c');let G=L('pt_g')||{cash:100000,pos:{}};const me=()=>cur&&U[cur]||G;
-const save=()=>{W('pt_u',U);W('pt_g',G)};
-function total(u){return u.cash+Object.keys(u.pos).reduce((s,i)=>s+u.pos[i]*eur(A2[i]),0)}
+let cur=null,ME=null,UID=null;let G=L('pt_g')||{cash:100000,pos:{}};const me=()=>ME||G;
+const save=()=>{W('pt_g',G);if(UID&&ME&&window.FB){clearTimeout(save.t);save.t=setTimeout(()=>FB.save({name:cur,cash:ME.cash,pos:ME.pos,cost:ME.cost||{}}),600)}};
+function total(u){return u.cash+Object.keys(u.pos).reduce((s,i)=>s+u.pos[i]*(A2[i]?eur(A2[i]):0),0)}
 const BOTS=[];
 let tab='sim',cat='stocks',open=null,q='',tf='1M',pro=false,side=1,iv=15,qty=1;
 const fmtD=t=>new Date(t).toLocaleDateString('nl-NL',{day:'numeric',month:'short'});
 $('#nav').innerHTML=[['sim','Simulatie'],['uitleg','Uitleg'],['rank','Ranglijst']].map(t=>`<button data-t="${t[0]}">${t[1]}</button>`).join('');
 $('#nav').onclick=e=>{if(e.target.dataset.t){tab=e.target.dataset.t;closeD();draw()}};
-const BIG=`<div class="bighero"><span class="bdg">%B%</span><h1>Beleg met <em>€ 100.000</em> oefengeld in aandelen</h1><p>Begin meteen, je hoeft niet in te loggen. Je voortgang blijft in deze browser bewaard. Wil je meedoen aan de ranglijst? Log dan in met je Google-account.</p><div class="row"><button class="btn pri" onclick="document.getElementById('tb').scrollIntoView({behavior:'smooth'})">Direct beginnen</button><button class="btn" onclick="document.getElementById('lg').click()">Opslaan / inloggen</button></div></div>`,
-STAT=`<div class="sts"><div><span>Portefeuillewaarde</span><b id="s1"></b><small id="s1b"></small></div><div><span>Vrij te beleggen</span><b id="s2"></b><small>beschikbaar geld</small></div><div><span>Belegd</span><b id="s3"></b><small id="s3b"></small></div></div>`;
+const BIG=`<div class="bighero"><span class="bdg">%B%</span><h1>Beleg met <em>€ 100.000</em> oefengeld in aandelen</h1><p>Begin meteen, je hoeft niet in te loggen. Je voortgang blijft in deze browser bewaard. Wil je meedoen aan de ranglijst? Log dan in met je Google-account.</p><div class="row"><button class="btn pri" onclick="document.getElementById('tb').scrollIntoView({behavior:'smooth'})">Direct beginnen</button><button class="btn" onclick="document.getElementById('lg').click()">Inloggen met Google</button></div></div>`,
+STAT=`<div class="sts"><div><span>Portefeuillewaarde</span><b id="s1"></b><small id="s1b"></small></div><div><span>Vrij te beleggen</span><b id="s2"></b><small>beschikbaar geld</small></div><div><span>Belegd</span><b id="s3"></b><small id="s3b"></small></div></div><div id="gb" class="gb"></div><div class="card" id="pf"></div>`;
 const UIT=`<div class="hero"><h1>Uitleg</h1><p>Leer hoe beleggen werkt, veilig en met oefengeld.</p></div><div class="ugrid">
 <div class="card"><h3>Wat is een aandeel?</h3><p>Een aandeel is een klein stukje van een bedrijf. Koop je één aandeel van Apple, dan ben je een heel klein beetje eigenaar. Gaat het goed met het bedrijf, dan wordt je aandeel vaak meer waard. Gaat het slecht, dan daalt de koers.</p></div>
 <div class="card"><h3>Wat is de beurs en de koers?</h3><p>Op de beurs kopen en verkopen mensen aandelen. De koers is de prijs van één aandeel op dit moment. Zijn er veel kopers, dan gaat de koers omhoog. Zijn er veel verkopers, dan gaat hij omlaag.</p></div>
@@ -99,14 +158,32 @@ const UIT=`<div class="hero"><h1>Uitleg</h1><p>Leer hoe beleggen werkt, veilig e
 <div class="card"><h3>Crypto, forex en metalen</h3><p>Crypto zijn digitale munten zoals Bitcoin. Forex is het omwisselen van valuta, bijvoorbeeld euro naar dollar. Goud en zilver zijn metalen die mensen vaak kopen als veilige bewaarplek. Ze bewegen allemaal anders dan aandelen.</p></div>
 <div class="card"><h3>Echt of nep?</h3><p>%ECHT%</p></div><div class="card"><h3>Hoe werkt de echte beurs?</h3><p>De Amerikaanse beurzen (NYSE en Nasdaq) zijn op werkdagen open van 9:30 tot 16:00 New Yorkse tijd. Dat is meestal 15:30 tot 22:00 Nederlandse tijd. In het weekend en op feestdagen zijn ze dicht, en dan veranderen de koersen niet. De Amsterdamse beurs is open van 9:00 tot 17:30. Crypto handel je de hele dag, elke dag. Forex en goud en zilver zijn op werkdagen bijna de hele dag open.</p></div><div class="card"><h3>Waarom 15 minuten vertraagd?</h3><p>Gratis koersen op websites lopen vaak 15 minuten achter. Dat doen wij ook: is het 10:15, dan zie je de koers van 10:00. Zo leer je rustig beslissen in plaats van heel snel te klikken.</p></div>
 <div class="card"><h3>Dit is een oefenspel</h3><p>Je speelt met nepgeld. Het is geen financieel advies en je kunt hier geen echt geld verdienen of verliezen.</p></div></div>`;
-function su(){if(!$('#s1'))return;const u=me(),v=total(u),r=v/1000-100,f=n=>'€ '+n.toLocaleString('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2}),k=Object.keys(u.pos).filter(i=>u.pos[i]>0).length;$('#s1').textContent=f(v);$('#s1b').textContent=(r>=0?'+':'')+r.toFixed(2)+'% sinds de start';$('#s1b').className=r>=0?'up':'dn';$('#s2').textContent=f(u.cash);$('#s3').textContent=f(v-u.cash);$('#s3b').textContent=k+' posities'}
+function su(){if(!$('#s1'))return;const u=me(),v=total(u),r=v/1000-100,f=n=>'€ '+n.toLocaleString('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2}),k=Object.keys(u.pos).filter(i=>u.pos[i]>0).length;$('#s1').textContent=f(v);$('#s1b').textContent=(r>=0?'+':'')+r.toFixed(2)+'% sinds de start';$('#s1b').className=r>=0?'up':'dn';$('#s2').textContent=f(u.cash);$('#s3').textContent=f(v-u.cash);$('#s3b').textContent=k+' posities';pf();gbu()}
+function cb(u,id){u.cost=u.cost||{};if(u.cost[id]==null)u.cost[id]=(u.pos[id]||0)*eur(A2[id]);return u.cost[id]}
+function gbu(){const gb=document.getElementById('gb');if(!gb)return;const w=cur?'':'1';if(gb.dataset.s!==w){gb.dataset.s=w;gb.innerHTML=cur?'':'<span>Je speelt als gast. Log in om je voortgang te bewaren en mee te doen met de ranglijst.</span><button class="btn pri" onclick="login()">Voortgang opslaan</button>'}}
+let pfSig='';
+function pf(){const e=document.getElementById('pf');if(!e)return;const u=me(),ks=Object.keys(u.pos).filter(i=>u.pos[i]>0),sig=ks.join(',');e.classList.toggle('empty',!ks.length);
+ if(sig!=pfSig||!e.firstChild){pfSig=sig;e.innerHTML='<h3 style="margin:0 0 10px">Mijn portefeuille</h3>'+(ks.length?'<div class="tw"><table><thead><tr><th>Aandeel</th><th>Stuks</th><th>Gem. aankoop</th><th>Koers</th><th>Waarde</th><th>Winst/verlies</th></tr></thead><tbody>'+ks.map(i=>`<tr class="a" onclick="show('${i}')"><td><b>${A2[i].name}</b><div class="mu" style="font-size:12px">${A2[i].sym}</div></td><td id="ps_${i}"></td><td id="pa_${i}"></td><td id="pk_${i}"></td><td id="pw_${i}"></td><td id="pl_${i}"></td></tr>`).join('')+'</tbody></table></div>':'<p class="mu" style="margin:0">Je hebt nog geen aandelen. Kies er een uit de lijst hieronder om te beginnen.</p>')}
+ const f=n=>'€ '+n.toLocaleString('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2}),G=x=>document.getElementById(x);
+ ks.forEach(i=>{const a=A2[i],pe=eur(a),n=u.pos[i],c=cb(u,i),v=n*pe,pl=v-c,pc=c?pl/c*100:0;G('ps_'+i).textContent=n;G('pa_'+i).textContent=f(c/n);G('pk_'+i).textContent=f(pe);G('pw_'+i).textContent=f(v);const l=G('pl_'+i);l.textContent=(pl>=0?'+':'')+f(pl)+' ('+(pc>=0?'+':'')+pc.toFixed(2)+'%)';l.className=pl>=0?'up':'dn'})}
 function draw(){document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.t==tab));const m=$('#m');
  if(tab=='uitleg'){m.innerHTML=UIT.replace('%ECHT%',REAL?"Alle koersen komen van echte bronnen. Aandelen lopen 15 minuten achter en worden per aandeel ongeveer elke 2 minuten bijgewerkt. Crypto wordt bijgewerkt zodra een prijs verandert (live via Binance), goud en zilver ongeveer elke minuut. Bij forex hangt de snelheid van de bron af en kan dat soms maar één keer per dag zijn. Als een beurs dicht is, staan de koersen stil. Grafieken van meer dan een dag bevatten nagebouwde data totdat de site genoeg echte koersen heeft verzameld.":"In dit spel zijn de koersen nagebouwd. Ze bewegen zoals echte koersen, met periodes van stijging, daling en rust, maar het zijn niet de koersen van de beurs. De startprijzen liggen dicht bij de echte prijzen. Omdat het spel de hele tijd doorloopt, bewegen de koersen hier ook 's nachts en in het weekend.");return}
- if(tab=='rank'){const rows=[];for(const n in U)rows.push({n,r:total(U[n])/1000-100});rows.sort((a,b)=>b.r-a.r);const u=me(),ks=Object.keys(u.pos).filter(i=>u.pos[i]>0);
-  m.innerHTML='<div class="hero"><h1>Ranglijst</h1><p>Wie belegt het slimst? Rendement ten opzichte van € 100.000 startgeld.</p></div>'+(cur?'':'<div class="card join"><b style="font-size:20px">Doe mee en log in!</b><p class="mu">Log in met je Google-account en kom op de ranglijst. Eén klik en je staat erop.</p><button class="btn pri" onclick="login()">Doorgaan met Google</button></div>')+'<div class="card"><table>'+(rows.length?rows.map((r,i)=>`<tr><td>${['','',''][i]||i+1+'.'} ${r.n}${r.n==cur?' (jij)':''}</td><td class="${r.r>=0?'up':'dn'}">${r.r>=0?'+':''}${r.r.toFixed(2)}%</td></tr>`).join(''):'<tr><td class="mu">Nog niemand op de ranglijst. Log in om als eerste te verschijnen!</td></tr>')+'</table></div>'+(ks.length?'<div class="card"><b>Mijn posities</b><table><tr><th>Aandeel</th><th>Stuks</th><th>Waarde €</th></tr>'+ks.map(i=>`<tr class="a" onclick="show('${i}')"><td>${A2[i].sym}</td><td>${u.pos[i]}</td><td>${(u.pos[i]*eur(A2[i])).toLocaleString('nl-NL',{maximumFractionDigits:2})}</td></tr>`).join('')+'</table></div>':'');return}
- m.innerHTML=BIG.replace('%B%',REAL?'Echte koersen · aandelen 15 min vertraagd · geen account nodig':'Oefenspel · nagebootste koersen · geen account nodig')+STAT+`<input id="q" placeholder="Zoek een aandeel, bijvoorbeeld Shell of AAPL" value="${q}"><div class="chips">`+[['stocks','Aandelen'],['crypto','Crypto'],['forex','Forex'],['metals','Metalen']].map(c=>`<button data-c="${c[0]}" class="${c[0]==cat?'on':''}">${c[1]} <small>${A.filter(a=>a.k==c[0]).length}</small></button>`).join('')+'</div>'+(cat=='stocks'&&!q?'<div class="dl"><b>15 min vertraagd</b><span>Koers van <i id="dly">'+fmtT(Date.now()-DELAY)+' (nu '+fmtT(Date.now())+')</i></span></div>':'')+'<div class="tw"><table><thead><tr><th>Naam</th><th>Prijs (€)</th><th>24u %</th><th>Grafiek</th></tr></thead><tbody id="tb"></tbody></table></div>';
+ if(tab=='rank'){m.innerHTML='<div class="hero"><h1>Ranglijst</h1><p>Iedereen start met € 100.000. De waarde is je contant geld plus je aandelen tegen de laatst opgehaalde koersen.</p></div>'+(cur?'':'<div class="card join"><b style="font-size:18px">Doe mee aan de ranglijst</b><p class="mu">Log in met je Google-account en kom op de ranglijst. Je voortgang als gast gaat mee.</p><button class="btn pri" onclick="login()">Inloggen met Google</button></div>')+'<div class="card" id="rk"><p class="mu" style="margin:0">Laden...</p></div>';loadRank();return}
+ m.innerHTML=BIG.replace('%B%',REAL?'Echte koersen · aandelen 15 min vertraagd · geen account nodig':'Oefenspel · nagebootste koersen · geen account nodig')+STAT+`<h2 class="sh">Markten</h2><input id="q" placeholder="Zoek een aandeel, bijvoorbeeld Shell of AAPL" value="${q}"><div class="chips">`+[['stocks','Aandelen'],['crypto','Crypto'],['forex','Forex'],['metals','Metalen']].map(c=>`<button data-c="${c[0]}" class="${c[0]==cat?'on':''}">${c[1]} <small>${A.filter(a=>a.k==c[0]).length}</small></button>`).join('')+'</div>'+(cat=='stocks'&&!q?'<div class="dl"><b>15 min vertraagd</b><span>Koers van <i id="dly">'+fmtT(Date.now()-DELAY)+' (nu '+fmtT(Date.now())+')</i></span></div>':'')+'<div class="tw"><table class="lst"><thead><tr><th>Naam</th><th>Prijs (€)</th><th>24u %</th><th>Grafiek</th></tr></thead><tbody id="tb"></tbody></table></div>';
  $('#q').oninput=e=>{q=e.target.value;fill()};document.querySelector('.chips').onclick=e=>{const c=e.target.closest('button');if(c){cat=c.dataset.c;q='';draw()}};fill()}
-function login(){const n=prompt('Kies je naam voor de ranglijst:');if(!n)return;if(!U[n])U[n]={pw:'',cash:100000,pos:{}};cur=n;W('pt_c',n);save();authUI();draw()}
+function modal(h,inner){let m=document.getElementById('md');if(!m){m=document.createElement('div');m.id='md';document.body.appendChild(m)}m.className='md';m.innerHTML='<div class="mdb"><h3>'+h+'</h3>'+inner+'</div>';m.style.display='flex'}
+function closeM(){const m=document.getElementById('md');if(m)m.style.display='none'}
+function login(){if(!window.FB){modal(window.FBFAIL?'Inloggen kan nu niet laden':'Inloggen is nog niet ingesteld',(window.FBFAIL?'<p>De inlogdienst van Google kon niet worden geladen. Probeer het later opnieuw, of schakel een adblocker uit.</p>':'<p>De koppeling met Google moet nog worden aangezet.</p>')+'<div class="row"><button class="btn" onclick="closeM()">Sluiten</button></div>');return}FB.login()}
+window.onFBError=e=>{if(e&&(e.code=='auth/popup-closed-by-user'||e.code=='auth/cancelled-popup-request'))return;modal('Inloggen mislukt','<p>'+((e&&(e.code||e.message))||'Onbekende fout')+'</p><div class="row"><button class="btn" onclick="closeM()">Sluiten</button></div>')};
+window.onFBAuth=(uid,d)=>{UID=uid;if(!uid){ME=null;cur=null;authUI();draw();return}if(d&&d.name){ME={cash:d.cash,pos:d.pos||{},cost:d.cost||{}};cur=d.name;authUI();draw()}else askName()};
+function askName(){modal('Kies je naam voor de ranglijst','<p>Dit is de naam die anderen zien. Je hoeft je echte naam niet te gebruiken.</p><input id="nm" maxlength="20" placeholder="Bijvoorbeeld Sven"><p id="nme" class="dn" style="margin:0"></p><div class="row"><button class="btn pri" onclick="saveName()">Opslaan</button><button class="btn" onclick="FB.logout();closeM()">Annuleren</button></div>')}
+async function saveName(){const v=document.getElementById('nm').value.trim(),e=document.getElementById('nme');if(!/^[\p{L}\p{N} ._-]{3,20}$/u.test(v)){e.textContent='Gebruik 3 tot 20 tekens: letters, cijfers, spatie, punt, streepje of underscore.';return}
+ try{const us=await FB.users();if(us.some(u=>(u.name||'').toLowerCase()==v.toLowerCase())){e.textContent='Die naam is al bezet. Kies een andere.';return}}catch(x){}
+ ME={cash:G.cash,pos:JSON.parse(JSON.stringify(G.pos)),cost:JSON.parse(JSON.stringify(G.cost||{}))};cur=v;FB.save({name:v,cash:ME.cash,pos:ME.pos,cost:ME.cost});closeM();authUI();draw()}
+let RK=null,rkT=0;
+async function loadRank(){const el=document.getElementById('rk');if(!el)return;if(!window.FB){el.innerHTML='<p class="mu" style="margin:0">De gedeelde ranglijst is nog niet ingesteld.</p>';return}try{RK=await FB.users()}catch(e){el.innerHTML='<p class="mu" style="margin:0">De ranglijst kon niet worden geladen.</p>';return}rkr()}
+function rkr(){const el=document.getElementById('rk');if(!el||!RK)return;const f=v=>'€ '+v.toLocaleString('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2}),rows=RK.filter(d=>d.name).map(d=>{const u={cash:d.cash||0,pos:d.pos||{}},t=total(u);return{n:d.name,t,c:u.cash,r:t/1000-100}}).sort((a,b)=>b.t-a.t).slice(0,100);
+ el.innerHTML=rows.length?rows.map((r,i)=>`<div class="rk${r.n==cur?' me':''}"><span class="rn">${i+1}</span><div class="rm"><b>${r.n}${r.n==cur?' (jij)':''}</b><small>${f(r.t-r.c)} belegd · ${f(r.c)} contant</small></div><div class="rv"><b>${f(r.t)}</b><small class="${r.r>=0?'up':'dn'}">${r.r>=0?'+':''}${r.r.toFixed(2)}%</small></div></div>`).join(''):'<p class="mu" style="margin:0">Nog niemand op de ranglijst. Log in om als eerste te verschijnen!</p>'}
 function fill(){const s=q.trim().toLowerCase(),list=s?A.filter(a=>a.k=='stocks'&&(a.id.toLowerCase().includes(s)||a.name.toLowerCase().includes(s))).slice(0,30):A.filter(a=>a.k==cat);
  $('#tb').innerHTML=list.length?list.map(a=>`<tr class="a" onclick="show('${a.id}')"><td>${icon(a)}<b>${a.sym}</b> <span class="mu">${a.k=='forex'?'':a.name}</span></td><td data-i="${a.id}" data-f="p"></td><td data-i="${a.id}" data-f="c"></td><td data-i="${a.id}" data-f="s"></td></tr>`).join(''):'<tr><td colspan="4" class="mu">Geen aandeel gevonden.</td></tr>';upd(true);su()}
 const last={};
@@ -115,7 +192,7 @@ function upd(init){document.querySelectorAll('#tb td[data-i]').forEach(td=>{cons
  else if(f=='c'){const c=(p/a.o-1)*100;td.innerHTML='<span class="pill '+(c>=0?'up':'dn')+'">'+(c>=0?'+':'')+c.toFixed(2)+'%</span>'}
  else if(f=='s'){const ct=cut(a),pt=a.h.filter(x=>x.t<=ct).slice(-60),mn=Math.min(...pt.map(x=>x.p)),mx=Math.max(...pt.map(x=>x.p)),up=pt[pt.length-1].p>=pt[0].p;td.innerHTML='<svg class="sp2" viewBox="0 0 90 30"><polyline fill="none" stroke="'+(up?'#19d38a':'#ff4560')+'" stroke-width="2" stroke-linejoin="round" points="'+pt.map((x,i)=>(i*90/(pt.length-1)).toFixed(1)+','+(28-(x.p-mn)/((mx-mn)||1)*26).toFixed(1)).join(' ')+'"/></svg>'}
  else td.textContent='€ '+fp(a.k=='forex'?p:p*EUR)});A.forEach(a=>last[a.id]=px(a).p)}
-function tick(){MK=MK*.995+g()*.15;A.forEach(a=>{if(a.ws&&a.k=='crypto'){const l=a.h[a.h.length-1];if(!l||l.p!==a.ws){if(!a.liveT){a.liveT=Date.now();a.real=true;if(!a.srv){a.h=[];a.o=a.ws;a.dh=null}}a.h.push({t:Date.now(),p:a.ws})}}});A.forEach(a=>{if(R()<.35&&!a.real){const l=a.h[a.h.length-1];a.h.push({t:Date.now(),p:nx(a,l.p,.25)});if(a.h.length>5000)a.h.splice(0,500)}});
+function tick(){if(tab=='rank'){rkT++;if(RK&&rkT%7==0)rkr();if(rkT%86==0)loadRank()}MK=MK*.995+g()*.15;A.forEach(a=>{if(a.ws&&a.k=='crypto'){const l=a.h[a.h.length-1];if(!l||l.p!==a.ws){if(!a.liveT){a.liveT=Date.now();a.real=true;if(!a.srv){a.h=[];a.o=a.ws;a.dh=null}}a.h.push({t:Date.now(),p:a.ws})}}});A.forEach(a=>{if(R()<.35&&!a.real){const l=a.h[a.h.length-1];a.h.push({t:Date.now(),p:nx(a,l.p,.25)});if(a.h.length>5000)a.h.splice(0,500)}});
  if(tab=='sim'){upd();su()}const u=me();$('#bal').textContent=!u?'':(cur?'':'Gast · ')+'Totaal € '+total(u).toLocaleString('nl-NL',{maximumFractionDigits:2})+' · Cash € '+u.cash.toLocaleString('nl-NL',{maximumFractionDigits:2});const dl=$('#dly');if(dl)dl.textContent=fmtT(Date.now()-DELAY)+' (nu '+fmtT(Date.now())+')';
  if(open)detail()}
 // detail
@@ -135,7 +212,7 @@ function tfb(){const o=pro?IV:TFL;$('#tfs').innerHTML=Object.keys(o).map(k=>`<bu
  $('#ptb').innerHTML=pro?'<div class="tb"><div class="tg">'+[['cur','Cursor'],['tl','Trendlijn'],['hl','Horizontale lijn'],['ms','Meten']].map(t=>B(t[1],CH.tool==t[0],`setTool('${t[0]}')`)).join('')+B('Verwijder',0,'delSel()')+B('Alles wissen',0,'clrDr()')+'</div><div class="tg">'+[['candle','Kaarsen'],['line','Lijn'],['area','Vlak']].map(t=>B(t[1],CH.style==t[0],`setStyle('${t[0]}')`)).join('')+'</div><div class="tg">'+B('MA 20',CH.ind.ma20,"togInd('ma20')")+B('MA 50',CH.ind.ma50,"togInd('ma50')")+'</div></div>':'';
  $('#hint').textContent=pro?HINT[CH.tool]:HINT.cur}
 function setTf(k){if(pro)iv=+k;else tf=k;tfb();detail()}
-function togglePro(){pro=!pro;CH.style=pro?'candle':'area';CH.tool='cur';CH.tmp=null;CH.ms=null;$('#cv').style.height=pro?'460px':'340px';tfb();detail()}
+function togglePro(){pro=!pro;CH.style=pro?'candle':'area';CH.tool='cur';CH.tmp=null;CH.ms=null;$('#cv').classList.toggle('big',pro);tfb();detail()}
 function setSide(s){side=s;$('#sb').className='b'+(s>0?' on':'');$('#ss').className='s'+(s<0?' on':'');const g=$('#go');g.className='btn '+(s>0?'g':'r');g.style.width='100%';g.textContent=s>0?'Kopen':'Verkopen';est()}
 function setQ(n){const u=me(),a=A2[open],pe=eur(a);if(n=='max')n=Math.max(1,Math.floor(side>0?u.cash/pe:(u.pos[a.id]||0)));qty=n;$('#qty').value=n;est()}
 function est(){const a=A2[open];if(a)$('#es').textContent='Geschat bedrag: € '+fp(qty*eur(a))}
@@ -184,11 +261,11 @@ function rd(){const cv=$('#cv');if(!cv||!CH.b.length)return;const d=devicePixelR
   x.font='12px system-ui';const bw2=Math.max(...ln.map(q=>x.measureText(q).width))+16,bh=ln.length*17+8;let tx=xx+14;const ty=Math.max(PT,Math.min(CH.my-bh-10,h-PB-bh));if(tx+bw2>w-PR)tx=xx-14-bw2;x.fillStyle='rgba(20,15,12,.93)';x.strokeStyle='#3a2f28';x.fillRect(tx,ty,bw2,bh);x.strokeRect(tx,ty,bw2,bh);x.fillStyle='#f4efe9';x.textAlign='left';ln.forEach((q,j)=>x.fillText(q,tx+8,ty+14+j*17));x.font='11px system-ui'}}
 function hit(x,y,g){for(let i=CH.dr.length-1;i>=0;i--){const o=CH.dr[i];if(o.k=='hl'){if(Math.abs(g.Y(o.a.p)-y)<7)return i}else{const x1=g.X(t2i(o.a.t)),y1=g.Y(o.a.p),x2=g.X(t2i(o.b.t)),y2=g.Y(o.b.p),dx=x2-x1,dy=y2-y1,l2=dx*dx+dy*dy||1,u=Math.max(0,Math.min(1,((x-x1)*dx+(y-y1)*dy)/l2));if(Math.hypot(x-(x1+u*dx),y-(y1+u*dy))<7)return i}}return -1}
 function bindCv(){const cv=$('#cv');
- cv.onpointerdown=e=>{const[x,y]=gp(e),g=geo();try{cv.setPointerCapture(e.pointerId)}catch(z){}
+ cv.onpointerdown=e=>{const[x,y]=gp(e),g=geo();CH.mx=x;CH.my=y;try{cv.setPointerCapture(e.pointerId)}catch(z){}
   if(pro&&CH.tool!='cur'){const p=pt2(g,x,y);if(CH.tool=='hl'){CH.dr.push({k:'hl',a:p});saveDr();setTool('cur')}else if(!CH.tmp){CH.ms=null;CH.tmp={k:CH.tool,a:p,b:p}}else{const o={k:CH.tool,a:CH.tmp.a,b:p};CH.tmp=null;if(o.k=='tl'){CH.dr.push(o);saveDr()}else CH.ms=o;setTool('cur')}}
   else{CH.sel=pro?hit(x,y,g):-1;if(CH.sel<0){CH.drag={x,off:CH.off};CH.ms=null}}rd()};
  cv.onpointermove=e=>{const[x,y]=gp(e);CH.mx=x;CH.my=y;const g=geo();if(CH.tmp)CH.tmp.b=pt2(g,x,y);if(CH.drag)CH.off=CH.drag.off+Math.round((x-CH.drag.x)/g.bw);rd()};
- cv.onpointerup=()=>{CH.drag=null};cv.onpointerleave=()=>{CH.mx=-1;rd()};
+ cv.onpointerup=()=>{CH.drag=null};cv.onpointerleave=e=>{if(e.pointerType!='touch'){CH.mx=-1;rd()}};
  cv.onwheel=e=>{e.preventDefault();CH.n=Math.round(Math.max(10,CH.n*(e.deltaY>0?1.15:1/1.15)));if(CH.n>CH.b.length)CH.n=CH.b.length;rd()};
  cv.style.cursor='crosshair'}
 function setTool(t){CH.tool=t;CH.tmp=null;tfb();$('#cv').style.cursor=t=='cur'?'crosshair':'copy';rd()}
@@ -200,14 +277,31 @@ window.addEventListener('keydown',e=>{if(!open)return;if((e.key=='Delete'||e.key
 window.addEventListener('resize',()=>{if(open)rd()});
 function closeD(){open=null;$('#ov').style.display='none'}
 function trade(){const u=me(),a=A2[open],n=qty,pe=eur(a),have=u.pos[a.id]||0,m=$('#msg');
- if(side>0){if(n*pe>u.cash+1e-9){m.textContent='Je hebt niet genoeg geld.';return}u.cash-=n*pe;u.pos[a.id]=have+n}
- else{if(n>have){m.textContent='Je hebt maar '+have+' stuks.';return}u.cash+=n*pe;u.pos[a.id]=have-n}
+ if(side>0){if(n*pe>u.cash+1e-9){m.textContent='Je hebt niet genoeg geld.';return}const c0=cb(u,a.id);u.cash-=n*pe;u.pos[a.id]=have+n;u.cost[a.id]=c0+n*pe}
+ else{if(n>have){m.textContent='Je hebt maar '+have+' stuks.';return}const c0=cb(u,a.id);u.cash+=n*pe;u.pos[a.id]=have-n;u.cost[a.id]=have>0?c0*(have-n)/have:0}
  save();m.textContent=' Gelukt: '+n+' stuks '+(side>0?'gekocht':'verkocht');est();detail()}
 // auth
-function authUI(){$('#lg').textContent=cur?'Uitloggen ('+cur+')':'Opslaan / inloggen';}
-$('#lg').onclick=()=>{if(cur){cur=null;W('pt_c',null);authUI();draw()}else login()};
+function authUI(){$('#lg').textContent=cur?'Uitloggen ('+cur+')':'Inloggen met Google';}
+$('#lg').onclick=()=>{if(cur){if(window.FB)FB.logout()}else login()};
 const WSX={MATIC:'POL',RNDR:'RENDER'},WSM={};A.filter(a=>a.k=='crypto').forEach(a=>WSM[(WSX[a.id]||a.id).toLowerCase()+'usdt']=a.id);
 function startWS(){try{const w=new WebSocket('wss://stream.binance.com:9443/stream?streams='+Object.keys(WSM).map(q=>q+'@trade').join('/'));w.onmessage=e=>{try{const d=JSON.parse(e.data).data,a=d&&A2[WSM[d.s.toLowerCase()]];if(a)a.ws=+d.p}catch(x){}};w.onclose=()=>setTimeout(startWS,5000);w.onerror=()=>w.close()}catch(e){}}
 async function loadReal(){try{const r=await fetch('/api/quotes');if(!r.ok)return;const H=await r.json();let any=0;if(H.__EUR&&H.__EUR.length)EUR=H.__EUR[H.__EUR.length-1][1];for(const id in H){const a=A2[id],p=H[id];if(!a||!p.length)continue;const first=!a.real;a.real=true;a.srv=true;any=1;const sv=p.map(x=>({t:x[0],p:x[1]}));a.h=a.liveT?sv.filter(x=>x.t<a.liveT).concat(a.h.filter(x=>x.t>=a.liveT)):sv;a.o=a.h[0].p;if(first)a.dh=null}if(any){const was=REAL;REAL=true;if(!was&&tab=='sim'&&!q)draw()}}catch(e){}}
 authUI();draw();setInterval(tick,700);startWS();loadReal();setInterval(loadReal,60000);
-</script></body></html>
+</script><script>window.FIREBASE_CONFIG={apiKey:"AIzaSyCmFvRAnGULgZq-3Wo-L6wEFS1lRhkyN8Q",authDomain:"beursspel-beaaf.firebaseapp.com",projectId:"beursspel-beaaf",appId:"1:10497687223:web:0c52010a6ff6fd9d429732"};</script>
+<script type="module">
+const cfg=window.FIREBASE_CONFIG;
+if(cfg&&cfg.apiKey)try{
+ const {initializeApp}=await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js');
+ const {getAuth,GoogleAuthProvider,signInWithPopup,signOut,onAuthStateChanged}=await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js');
+ const {getFirestore,doc,getDoc,setDoc,collection,getDocs,limit,query,serverTimestamp}=await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js');
+ const app=initializeApp(cfg),auth=getAuth(app),db=getFirestore(app);
+ window.FB={
+  login:()=>signInWithPopup(auth,new GoogleAuthProvider()).catch(e=>window.onFBError&&window.onFBError(e)),
+  logout:()=>signOut(auth),
+  save:d=>auth.currentUser?setDoc(doc(db,'users',auth.currentUser.uid),{...d,updated:serverTimestamp()},{merge:true}):null,
+  users:async()=>(await getDocs(query(collection(db,'users'),limit(500)))).docs.map(x=>x.data())
+ };
+ onAuthStateChanged(auth,async u=>{if(!u){window.onFBAuth(null,null);return}let d=null;try{const x=await getDoc(doc(db,'users',u.uid));d=x.exists()?x.data():null}catch(e){}window.onFBAuth(u.uid,d)});
+}catch(e){window.FBFAIL=true;console.warn('Firebase kon niet laden',e)}
+</script>
+</body></html>
